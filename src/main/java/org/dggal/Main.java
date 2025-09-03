@@ -11,14 +11,13 @@ public class Main {
 
     public static void main(String[] args) throws Throwable {
 
-        final DGGAL dggal = DGGAL.load(Paths.get("../path/to/libdggal_c.so"));
+        final DGGAL dggal = DGGAL.load(Paths.get("../libdggal_c_fn.so"));
+        MemorySegment module = dggal.init();
 
-        MemorySegment app = dggal.ecrt_init(null, true, false, 0, null);
-        MemorySegment mdggal = dggal.dggal_init(app);
-        //todo a simple demo case
+        MemorySegment dggrs = dggal.newDggrs(module, "IVEA3H");
+        dggal.deleteDggrs(dggrs);
 
-
-        dggal.deletei(app);
+        dggal.terminate(module);
     }
 
 }
