@@ -198,229 +198,267 @@ public final class DGGAL implements AutoCloseable {
     /**
      * {@snippet lang=c : DGGRS DGGAL_DGGRS_new(DGGALModule mDGGAL, constString name); }.
      */
-    private final MethodHandle DGGAL_DGGRS_new;
+    final MethodHandle DGGAL_DGGRS_new;
     /**
      * {@snippet lang=c : void DGGAL_DGGRS_delete(DGGRS self); }.
      */
-    private final MethodHandle DGGAL_DGGRS_delete;
+    final MethodHandle DGGAL_DGGRS_delete;
 
     /**
      * DGGRSZone DGGAL_DGGRS_getZoneFromTextID(const DGGRS self, constString zoneID);
      */
-    private final MethodHandle DGGAL_DGGRS_getZoneFromTextID;
+    final MethodHandle DGGAL_DGGRS_getZoneFromTextID;
     /**
      * int DGGAL_DGGRS_getZoneLevel(const DGGRS self, DGGRSZone zone);
      */
-    private final MethodHandle DGGAL_DGGRS_getZoneLevel;
+    final MethodHandle DGGAL_DGGRS_getZoneLevel;
     /**
      * int DGGAL_DGGRS_countZoneEdges(const DGGRS self, DGGRSZone zone);
      */
-    private final MethodHandle DGGAL_DGGRS_countZoneEdges;
+    final MethodHandle DGGAL_DGGRS_countZoneEdges;
     /**
      * int DGGAL_DGGRS_getRefinementRatio(const DGGRS self);
      */
-    private final MethodHandle DGGAL_DGGRS_getRefinementRatio;
+    final MethodHandle DGGAL_DGGRS_getRefinementRatio;
     /**
      * int DGGAL_DGGRS_getMaxDGGRSZoneLevel(const DGGRS self);
      */
-    private final MethodHandle DGGAL_DGGRS_getMaxDGGRSZoneLevel;
+    final MethodHandle DGGAL_DGGRS_getMaxDGGRSZoneLevel;
     /**
      * void DGGAL_DGGRS_getZoneWGS84Centroid(const DGGRS self, DGGRSZone zone, GeoPoint * outCentroid);
      */
-    private final MethodHandle DGGAL_DGGRS_getZoneWGS84Centroid;
+    final MethodHandle DGGAL_DGGRS_getZoneWGS84Centroid;
     /**
      * int DGGAL_DGGRS_getZoneWGS84Vertices(const DGGRS self, DGGRSZone zone, GeoPoint * outVertices);
      */
-    private final MethodHandle DGGAL_DGGRS_getZoneWGS84Vertices;
+    final MethodHandle DGGAL_DGGRS_getZoneWGS84Vertices;
     /**
      * double DGGAL_DGGRS_getZoneArea(const DGGRS self, DGGRSZone zone);
      */
-    private final MethodHandle DGGAL_DGGRS_getZoneArea;
+    final MethodHandle DGGAL_DGGRS_getZoneArea;
     /**
      * uint64_t DGGAL_DGGRS_countSubZones(const DGGRS self, DGGRSZone zone, int depth);
      */
-    private final MethodHandle DGGAL_DGGRS_countSubZones;
+    final MethodHandle DGGAL_DGGRS_countSubZones;
     /**
      * void DGGAL_DGGRS_getZoneTextID(const DGGRS self, DGGRSZone zone, char outId[256]);
      */
-    private final MethodHandle DGGAL_DGGRS_getZoneTextID;
+    final MethodHandle DGGAL_DGGRS_getZoneTextID;
     /**
      * int DGGAL_DGGRS_getZoneParents(const DGGRS self, DGGRSZone zone, DGGRSZone outParents[3]);
      */
-    private final MethodHandle DGGAL_DGGRS_getZoneParents;
+    final MethodHandle DGGAL_DGGRS_getZoneParents;
     /**
      * int DGGAL_DGGRS_getZoneChildren(const DGGRS self, DGGRSZone zone, DGGRSZone outChildren[13]);
      */
-    private final MethodHandle DGGAL_DGGRS_getZoneChildren;
+    final MethodHandle DGGAL_DGGRS_getZoneChildren;
     /**
      * int DGGAL_DGGRS_getZoneNeighbors(const DGGRS self, DGGRSZone zone, DGGRSZone outNeighbors[6], int outNbTypes[6]);
      */
-    private final MethodHandle DGGAL_DGGRS_getZoneNeighbors;
+    final MethodHandle DGGAL_DGGRS_getZoneNeighbors;
     /**
      * DGGRSZone DGGAL_DGGRS_getZoneCentroidParent(const DGGRS self, DGGRSZone zone);
      */
-    private final MethodHandle DGGAL_DGGRS_getZoneCentroidParent;
+    final MethodHandle DGGAL_DGGRS_getZoneCentroidParent;
     /**
      * DGGRSZone DGGAL_DGGRS_getZoneCentroidChild(const DGGRS self, DGGRSZone zone);
      */
-    private final MethodHandle DGGAL_DGGRS_getZoneCentroidChild;
+    final MethodHandle DGGAL_DGGRS_getZoneCentroidChild;
     /**
      * int DGGAL_DGGRS_isZoneCentroidChild(const DGGRS self, DGGRSZone zone);
      */
-    private final MethodHandle DGGAL_DGGRS_isZoneCentroidChild;
+    final MethodHandle DGGAL_DGGRS_isZoneCentroidChild;
     /**
      * void DGGAL_DGGRS_getZoneWGS84Extent(const DGGRS self, DGGRSZone zone, GeoExtent * outExtent);
      */
-    private final MethodHandle DGGAL_DGGRS_getZoneWGS84Extent;
+    final MethodHandle DGGAL_DGGRS_getZoneWGS84Extent;
     /**
      * Array_DGGRSZone DGGAL_DGGRS_listZones(const DGGRS self, int level, const GeoExtent * bbox);
      */
-    private final MethodHandle DGGAL_DGGRS_listZones;
+    final MethodHandle DGGAL_DGGRS_listZones;
     /**
      * Array_GeoPoint DGGAL_DGGRS_getZoneRefinedWGS84Vertices(const DGGRS self, DGGRSZone zone, int refinement);
      */
-    private final MethodHandle DGGAL_DGGRS_getZoneRefinedWGS84Vertices;
+    final MethodHandle DGGAL_DGGRS_getZoneRefinedWGS84Vertices;
     /**
      * Array_DGGRSZone DGGAL_DGGRS_getSubZones(const DGGRS self, DGGRSZone zone, int depth);
      */
-    private final MethodHandle DGGAL_DGGRS_getSubZones;
+    final MethodHandle DGGAL_DGGRS_getSubZones;
     /**
      * DGGRSZone DGGAL_DGGRS_getZoneFromWGS84Centroid(const DGGRS self, int level, const GeoPoint * point);
      */
-    private final MethodHandle DGGAL_DGGRS_getZoneFromWGS84Centroid;
+    final MethodHandle DGGAL_DGGRS_getZoneFromWGS84Centroid;
     /**
      * uint64_t DGGAL_DGGRS_countZones(const DGGRS self, int level);
      */
-    private final MethodHandle DGGAL_DGGRS_countZones;
+    final MethodHandle DGGAL_DGGRS_countZones;
     /**
      * DGGRSZone DGGAL_DGGRS_getFirstSubZone(const DGGRS self, DGGRSZone parent, int relativeDepth);
      */
-    private final MethodHandle DGGAL_DGGRS_getFirstSubZone;
+    final MethodHandle DGGAL_DGGRS_getFirstSubZone;
     /**
      * int DGGAL_DGGRS_getIndexMaxDepth(const DGGRS self);
      */
-    private final MethodHandle DGGAL_DGGRS_getIndexMaxDepth;
+    final MethodHandle DGGAL_DGGRS_getIndexMaxDepth;
     /**
      * int DGGAL_DGGRS_getMaxChildren(const DGGRS self);
      */
-    private final MethodHandle DGGAL_DGGRS_getMaxChildren;
+    final MethodHandle DGGAL_DGGRS_getMaxChildren;
     /**
      * int DGGAL_DGGRS_getMaxNeighbors(const DGGRS self);
      */
-    private final MethodHandle DGGAL_DGGRS_getMaxNeighbors;
+    final MethodHandle DGGAL_DGGRS_getMaxNeighbors;
     /**
      * int DGGAL_DGGRS_getMaxParents(const DGGRS self);
      */
-    private final MethodHandle DGGAL_DGGRS_getMaxParents;
+    final MethodHandle DGGAL_DGGRS_getMaxParents;
     /**
      * DGGRSZone DGGAL_DGGRS_getSubZoneAtIndex(const DGGRS self, DGGRSZone parent, int relativeDepth, int64_t index);
      */
-    private final MethodHandle DGGAL_DGGRS_getSubZoneAtIndex;
+    final MethodHandle DGGAL_DGGRS_getSubZoneAtIndex;
     /**
      * int64_t DGGAL_DGGRS_getSubZoneIndex(const DGGRS self, DGGRSZone parent, DGGRSZone subZone);
      */
-    private final MethodHandle DGGAL_DGGRS_getSubZoneIndex;
+    final MethodHandle DGGAL_DGGRS_getSubZoneIndex;
     /**
      * Array_Pointd DGGAL_DGGRS_getSubZoneCRSCentroids(const DGGRS self, DGGRSZone parent, CRS crs, int relativeDepth);
      */
-    private final MethodHandle DGGAL_DGGRS_getSubZoneCRSCentroids;
+    final MethodHandle DGGAL_DGGRS_getSubZoneCRSCentroids;
     /**
      * Array_GeoPoint DGGAL_DGGRS_getSubZoneWGS84Centroids(const DGGRS self, DGGRSZone parent, int relativeDepth);
      */
-    private final MethodHandle DGGAL_DGGRS_getSubZoneWGS84Centroids;
+    final MethodHandle DGGAL_DGGRS_getSubZoneWGS84Centroids;
     /**
      * Array_Pointd DGGAL_DGGRS_getZoneRefinedCRSVertices(const DGGRS self, DGGRSZone zone, CRS crs, int refinement);
      */
-    private final MethodHandle DGGAL_DGGRS_getZoneRefinedCRSVertices;
+    final MethodHandle DGGAL_DGGRS_getZoneRefinedCRSVertices;
     /**
      * void DGGAL_DGGRS_getZoneCRSCentroid(const DGGRS self, DGGRSZone zone, CRS crs, Pointd * outCentroid);
      */
-    private final MethodHandle DGGAL_DGGRS_getZoneCRSCentroid;
+    final MethodHandle DGGAL_DGGRS_getZoneCRSCentroid;
     /**
      * void DGGAL_DGGRS_getZoneCRSExtent(const DGGRS self, DGGRSZone zone, CRS crs, CRSExtent * outExtent)
      */
-    private final MethodHandle DGGAL_DGGRS_getZoneCRSExtent;
+    final MethodHandle DGGAL_DGGRS_getZoneCRSExtent;
     /**
      * void DGGAL_DGGRS_compactZones(const DGGRS self, Array_DGGRSZone zones);
      */
-    private final MethodHandle DGGAL_DGGRS_compactZones;
+    final MethodHandle DGGAL_DGGRS_compactZones;
     /**
      * int DGGAL_DGGRS_get64KDepth(const DGGRS self);
      */
-    private final MethodHandle DGGAL_DGGRS_get64KDepth;
+    final MethodHandle DGGAL_DGGRS_get64KDepth;
     /**
      * int DGGAL_DGGRS_getMaxDepth(const DGGRS self);
      */
-    private final MethodHandle DGGAL_DGGRS_getMaxDepth;
+    final MethodHandle DGGAL_DGGRS_getMaxDepth;
     /**
      * int DGGAL_DGGRS_areZonesNeighbors(const DGGRS self, DGGRSZone a, DGGRSZone b);
      */
-    private final MethodHandle DGGAL_DGGRS_areZonesNeighbors;
+    final MethodHandle DGGAL_DGGRS_areZonesNeighbors;
     /**
      * int DGGAL_DGGRS_areZonesSiblings(const DGGRS self, DGGRSZone a, DGGRSZone b);
      */
-    private final MethodHandle DGGAL_DGGRS_areZonesSiblings;
+    final MethodHandle DGGAL_DGGRS_areZonesSiblings;
     /**
      * int DGGAL_DGGRS_doZonesOverlap(const DGGRS self, DGGRSZone a, DGGRSZone b);
      */
-    private final MethodHandle DGGAL_DGGRS_doZonesOverlap;
+    final MethodHandle DGGAL_DGGRS_doZonesOverlap;
     /**
      * int DGGAL_DGGRS_doesZoneContain(const DGGRS self, DGGRSZone hayStack, DGGRSZone needle);
      */
-    private final MethodHandle DGGAL_DGGRS_doesZoneContain;
+    final MethodHandle DGGAL_DGGRS_doesZoneContain;
     /**
      * int DGGAL_DGGRS_isZoneAncestorOf(const DGGRS self, DGGRSZone ancestor, DGGRSZone descendant, int maxDepth);
      */
-    private final MethodHandle DGGAL_DGGRS_isZoneAncestorOf;
+    final MethodHandle DGGAL_DGGRS_isZoneAncestorOf;
     /**
      * int DGGAL_DGGRS_isZoneContainedIn(const DGGRS self, DGGRSZone needle, DGGRSZone hayStack);
      */
-    private final MethodHandle DGGAL_DGGRS_isZoneContainedIn;
+    final MethodHandle DGGAL_DGGRS_isZoneContainedIn;
     /**
      * int DGGAL_DGGRS_isZoneDescendantOf(const DGGRS self, DGGRSZone descendant, DGGRSZone ancestor, int maxDepth);
      */
-    private final MethodHandle DGGAL_DGGRS_isZoneDescendantOf;
+    final MethodHandle DGGAL_DGGRS_isZoneDescendantOf;
     /**
      * int DGGAL_DGGRS_isZoneImmediateChildOf(const DGGRS self, DGGRSZone child, DGGRSZone parent);
      */
-    private final MethodHandle DGGAL_DGGRS_isZoneImmediateChildOf;
+    final MethodHandle DGGAL_DGGRS_isZoneImmediateChildOf;
     /**
      * int DGGAL_DGGRS_isZoneImmediateParentOf(const DGGRS self, DGGRSZone parent, DGGRSZone child);
      */
-    private final MethodHandle DGGAL_DGGRS_isZoneImmediateParentOf;
+    final MethodHandle DGGAL_DGGRS_isZoneImmediateParentOf;
     /**
      * int DGGAL_DGGRS_zoneHasSubZone(const DGGRS self, DGGRSZone hayStack, DGGRSZone needle);
      */
-    private final MethodHandle DGGAL_DGGRS_zoneHasSubZone;
+    final MethodHandle DGGAL_DGGRS_zoneHasSubZone;
     /**
      * int DGGAL_DGGRS_getLevelFromMetersPerSubZone(const DGGRS self, double physicalMetersPerSubZone, int relativeDepth);
      */
-    private final MethodHandle DGGAL_DGGRS_getLevelFromMetersPerSubZone;
+    final MethodHandle DGGAL_DGGRS_getLevelFromMetersPerSubZone;
     /**
      * int DGGAL_DGGRS_getLevelFromPixelsAndExtent(const DGGRS self, const GeoExtent * extent, int width, int height, int relativeDepth);
      */
-    private final MethodHandle DGGAL_DGGRS_getLevelFromPixelsAndExtent;
+    final MethodHandle DGGAL_DGGRS_getLevelFromPixelsAndExtent;
     /**
      * int DGGAL_DGGRS_getLevelFromRefZoneArea(const DGGRS self, double metersSquared);
      */
-    private final MethodHandle DGGAL_DGGRS_getLevelFromRefZoneArea;
+    final MethodHandle DGGAL_DGGRS_getLevelFromRefZoneArea;
     /**
      * int DGGAL_DGGRS_getLevelFromScaleDenominator(const DGGRS self, double scaleDenominator, int relativeDepth, double mmPerPixel);
      */
-    private final MethodHandle DGGAL_DGGRS_getLevelFromScaleDenominator;
+    final MethodHandle DGGAL_DGGRS_getLevelFromScaleDenominator;
     /**
      * double DGGAL_DGGRS_getMetersPerSubZoneFromLevel(const DGGRS self, int parentLevel, int relativeDepth);
      */
-    private final MethodHandle DGGAL_DGGRS_getMetersPerSubZoneFromLevel;
+    final MethodHandle DGGAL_DGGRS_getMetersPerSubZoneFromLevel;
     /**
      * double DGGAL_DGGRS_getRefZoneArea(const DGGRS self, int level);
      */
-    private final MethodHandle DGGAL_DGGRS_getRefZoneArea;
+    final MethodHandle DGGAL_DGGRS_getRefZoneArea;
     /**
      * double DGGAL_DGGRS_getScaleDenominatorFromLevel(const DGGRS self, int parentLevel, int relativeDepth, double mmPerPixel);
      */
-    private final MethodHandle DGGAL_DGGRS_getScaleDenominatorFromLevel;
+    final MethodHandle DGGAL_DGGRS_getScaleDenominatorFromLevel;
 
+    /**
+     * int DGGAL_Array_GeoPoint_getCount(const Array_GeoPoint self);
+     */
+    final MethodHandle DGGAL_Array_GeoPoint_getCount;
+    /**
+     * const GeoPoint * DGGAL_Array_GeoPoint_getPointer(const Array_GeoPoint self);
+     */
+    final MethodHandle DGGAL_Array_GeoPoint_getPointer;
+    /**
+     * void DGGAL_Array_GeoPoint_delete(Array_GeoPoint self);
+     */
+    final MethodHandle DGGAL_Array_GeoPoint_delete;
+
+    /**
+     * int DGGAL_Array_Pointd_getCount(const Array_Pointd self);
+     */
+    final MethodHandle DGGAL_Array_Pointd_getCount;
+    /**
+     * const Pointd * DGGAL_Array_Pointd_getPointer(const Array_Pointd self);
+     */
+    final MethodHandle DGGAL_Array_Pointd_getPointer;
+    /**
+     * void DGGAL_Array_Pointd_delete(Array_Pointd self);
+     */
+    final MethodHandle DGGAL_Array_Pointd_delete;
+
+    /**
+     * int DGGAL_Array_DGGRSZone_getCount(const Array_DGGRSZone self);
+     */
+    final MethodHandle DGGAL_Array_DGGRSZone_getCount;
+    /**
+     * const DGGRSZone * DGGAL_Array_DGGRSZone_getPointer(const Array_DGGRSZone self);
+     */
+    final MethodHandle DGGAL_Array_DGGRSZone_getPointer;
+    /**
+     * void DGGAL_Array_DGGRSZone_delete(Array_DGGRSZone self);
+     */
+    final MethodHandle DGGAL_Array_DGGRSZone_delete;
 
 
     /**
@@ -461,7 +499,7 @@ public final class DGGAL implements AutoCloseable {
         DGGAL_DGGRS_getZoneCentroidChild            = lookup("DGGAL_DGGRS_getZoneCentroidChild",        of(C_LONG, C_POINTER, C_LONG));
         DGGAL_DGGRS_isZoneCentroidChild             = lookup("DGGAL_DGGRS_isZoneCentroidChild",         of(C_INT, C_POINTER, C_LONG));
         DGGAL_DGGRS_getZoneWGS84Extent              = lookup("DGGAL_DGGRS_getZoneWGS84Extent",          ofVoid(C_POINTER, C_LONG, C_POINTER));
-        DGGAL_DGGRS_listZones                       = lookup("DGGAL_DGGRS_listZones",                   of(C_POINTER, C_POINTER, C_INT, C_INT, C_POINTER));
+        DGGAL_DGGRS_listZones                       = lookup("DGGAL_DGGRS_listZones",                   of(C_POINTER, C_POINTER, C_INT, C_POINTER));
         DGGAL_DGGRS_getZoneRefinedWGS84Vertices     = lookup("DGGAL_DGGRS_getZoneRefinedWGS84Vertices", of(C_POINTER, C_POINTER, C_LONG, C_INT));
         DGGAL_DGGRS_getSubZones                     = lookup("DGGAL_DGGRS_getSubZones",                 of(C_POINTER, C_POINTER, C_LONG, C_INT));
         DGGAL_DGGRS_getZoneFromWGS84Centroid        = lookup("DGGAL_DGGRS_getZoneFromWGS84Centroid",    of(C_LONG, C_POINTER, C_INT, C_POINTER));
@@ -499,6 +537,18 @@ public final class DGGAL implements AutoCloseable {
         DGGAL_DGGRS_getRefZoneArea                  = lookup("DGGAL_DGGRS_getRefZoneArea",              of(C_DOUBLE, C_POINTER, C_INT));
         DGGAL_DGGRS_getScaleDenominatorFromLevel    = lookup("DGGAL_DGGRS_getScaleDenominatorFromLevel",of(C_DOUBLE, C_POINTER, C_INT, C_INT, C_DOUBLE));
 
+
+        DGGAL_Array_GeoPoint_getCount               = lookup("DGGAL_Array_GeoPoint_getCount", of(C_INT, C_POINTER));
+        DGGAL_Array_GeoPoint_getPointer             = lookup("DGGAL_Array_GeoPoint_getPointer", of(C_POINTER, C_POINTER));
+        DGGAL_Array_GeoPoint_delete                 = lookup("DGGAL_Array_GeoPoint_delete", ofVoid(C_POINTER));
+
+        DGGAL_Array_Pointd_getCount                 = lookup("DGGAL_Array_Pointd_getCount", of(C_INT, C_POINTER));
+        DGGAL_Array_Pointd_getPointer               = lookup("DGGAL_Array_Pointd_getPointer", of(C_POINTER, C_POINTER));
+        DGGAL_Array_Pointd_delete                   = lookup("DGGAL_Array_Pointd_delete", ofVoid(C_POINTER));
+
+        DGGAL_Array_DGGRSZone_getCount              = lookup("DGGAL_Array_DGGRSZone_getCount", of(C_INT, C_POINTER));
+        DGGAL_Array_DGGRSZone_getPointer            = lookup("DGGAL_Array_DGGRSZone_getPointer", of(C_POINTER, C_POINTER));
+        DGGAL_Array_DGGRSZone_delete                = lookup("DGGAL_Array_DGGRSZone_delete", ofVoid(C_POINTER));
     }
 
     // ///////////////////////////////////////
@@ -513,14 +563,12 @@ public final class DGGAL implements AutoCloseable {
         DGGAL_terminate.invokeExact(module);
     }
 
-    public MemorySegment newDggrs(MemorySegment module, String name) throws Throwable {
+    public DggalDggrs newDggrs(MemorySegment module, String name) throws Throwable {
         try (Arena tempArena = Arena.ofConfined()){
-            return (MemorySegment) DGGAL_DGGRS_new.invokeExact(module, tempArena.allocateFrom(name));
+            final MemorySegment pointer = (MemorySegment) DGGAL_DGGRS_new.invokeExact(module, tempArena.allocateFrom(name));
+            if (pointer.equals(NULL)) throw new IllegalArgumentException("Unknown dggrs " + name);
+            return new DggalDggrs(global, pointer, name);
         }
-    }
-
-    public void deleteDggrs(MemorySegment dggrs) throws Throwable {
-        DGGAL_DGGRS_delete.invokeExact(dggrs);
     }
 
 }
